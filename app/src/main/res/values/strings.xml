@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KolinIt</string>
+    <string name="sad_button">Sad</string>
+    <string name="happy_button">Happy!!!</string>
+</resources>
