@@ -22,15 +22,25 @@ public class HappyActivity extends AppCompatActivity {
         happy_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAppName();
+                try
+                {
+                    showText("Hey, listen!");
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
     }
 
-    private void showAppName() {
+    private void showText(String text) throws Exception
+    {
+        if (text == null)
+            throw new Exception();
+
         Toast.makeText(
             this,
-            R.string.app_name,
+            text,
             Toast.LENGTH_SHORT
         ).show();
     }
